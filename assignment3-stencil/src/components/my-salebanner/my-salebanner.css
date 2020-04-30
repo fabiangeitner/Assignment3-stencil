@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:host {
+  display: block;
+}
+
+.sale{
+  background-color: black;
+  text-align: center;
+  height: 15vh;
+  padding: 10%;
+
+}
+
+.sale p1{
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.sale p2{
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 27px;
+  font-weight: 400;
+}

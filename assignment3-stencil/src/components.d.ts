@@ -20,6 +20,8 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MySalebanner {
+    }
     interface StartseiteNavigation {
     }
 }
@@ -30,6 +32,12 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLMySalebannerElement extends Components.MySalebanner, HTMLStencilElement {
+    }
+    var HTMLMySalebannerElement: {
+        prototype: HTMLMySalebannerElement;
+        new (): HTMLMySalebannerElement;
+    };
     interface HTMLStartseiteNavigationElement extends Components.StartseiteNavigation, HTMLStencilElement {
     }
     var HTMLStartseiteNavigationElement: {
@@ -38,6 +46,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "my-salebanner": HTMLMySalebannerElement;
         "startseite-navigation": HTMLStartseiteNavigationElement;
     }
 }
@@ -56,10 +65,13 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface MySalebanner {
+    }
     interface StartseiteNavigation {
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "my-salebanner": MySalebanner;
         "startseite-navigation": StartseiteNavigation;
     }
 }
@@ -68,6 +80,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-salebanner": LocalJSX.MySalebanner & JSXBase.HTMLAttributes<HTMLMySalebannerElement>;
             "startseite-navigation": LocalJSX.StartseiteNavigation & JSXBase.HTMLAttributes<HTMLStartseiteNavigationElement>;
         }
     }
