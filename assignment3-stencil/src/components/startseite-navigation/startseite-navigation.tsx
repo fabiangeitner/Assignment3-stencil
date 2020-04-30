@@ -12,11 +12,11 @@ export class StartseiteNavigation implements ComponentInterface {
       <Host>
         <div class="nav">
           <ul>
-            <li><a href=""><img src="../Bilder/home-run.png" alt="Home" /></a></li>
-            <li><a href=""><img src="../Bilder/cloth.png" alt="T-shirt" /></a></li>
-            <li><a href=""><img src="../Bilder/heart.png" alt="Favoriten" /></a></li>
-            <li><a href=""><img src="../Bilder/bag.png" alt="Einkaufstasche" /></a></li>
-            <li><a href=""><img src="../Bilder/user.png" alt="Konto" /></a></li>
+            <li><a href="#"><img src="../Bilder/home-run.png" alt="Home" /></a></li>
+            <li><a href="#"><img src="../Bilder/cloth.png" alt="T-shirt" /></a></li>
+            <li><a href="#"><img src="../Bilder/heart.png" alt="Favoriten" /></a></li>
+            <li><a href="#"><img src="../Bilder/bag.png" alt="Einkaufstasche" /></a></li>
+            <li><a href="#"><img src="../Bilder/user.png" alt="Konto" /></a></li>
           </ul>
         </div>
 

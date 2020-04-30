@@ -4,10 +4,11 @@
 
 .nav{
   border-top: solid 1px black;
+  height: 8vh;
 }
 
 .nav ul{
-  padding: 5% 0;
+  padding: 4% 0;
   margin: 0;
   text-align: center;
 }
@@ -27,6 +28,6 @@ text-decoration: none;
 }
 
 .nav ul li a img{
-  width: 140%;
+  width: 120%;
 }
 
