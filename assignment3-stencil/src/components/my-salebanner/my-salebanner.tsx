@@ -11,7 +11,7 @@ export class MySalebanner implements ComponentInterface {
     return (
       <Host>
         <div class="sale">
-          <p1>Nur heute!</p1> <br /> <br />
+          <p1>Nur heute!</p1> <br />
           <p2>25 % auf einen Artikel deiner Wahl</p2>
         </div>
       </Host>

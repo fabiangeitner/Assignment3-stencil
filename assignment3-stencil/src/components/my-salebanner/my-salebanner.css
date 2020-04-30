@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 :host {
   display: block;
@@ -7,8 +7,10 @@
 .sale{
   background-color: black;
   text-align: center;
-  height: 15vh;
-  padding: 10%;
+  height: 13vh;
+  padding-top: 7%;
+  padding-left: 15%;
+  padding-right: 15%;
 
 }
 
@@ -17,13 +19,14 @@
   color: white;
   font-family: 'Roboto', sans-serif;
   font-size: 17px;
-  font-weight: 300;
+  font-weight: 100;
+  margin-bottom: 5px;
 }
 
 .sale p2{
   text-align: center;
   color: white;
   font-family: 'Roboto', sans-serif;
-  font-size: 27px;
+  font-size: 23px;
   font-weight: 400;
 }

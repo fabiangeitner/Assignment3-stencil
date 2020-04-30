@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface HomeScreen {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -26,6 +28,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLHomeScreenElement extends Components.HomeScreen, HTMLStencilElement {
+    }
+    var HTMLHomeScreenElement: {
+        prototype: HTMLHomeScreenElement;
+        new (): HTMLHomeScreenElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -45,12 +53,15 @@ declare global {
         new (): HTMLStartseiteNavigationElement;
     };
     interface HTMLElementTagNameMap {
+        "home-screen": HTMLHomeScreenElement;
         "my-component": HTMLMyComponentElement;
         "my-salebanner": HTMLMySalebannerElement;
         "startseite-navigation": HTMLStartseiteNavigationElement;
     }
 }
 declare namespace LocalJSX {
+    interface HomeScreen {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -70,6 +81,7 @@ declare namespace LocalJSX {
     interface StartseiteNavigation {
     }
     interface IntrinsicElements {
+        "home-screen": HomeScreen;
         "my-component": MyComponent;
         "my-salebanner": MySalebanner;
         "startseite-navigation": StartseiteNavigation;
@@ -79,6 +91,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "home-screen": LocalJSX.HomeScreen & JSXBase.HTMLAttributes<HTMLHomeScreenElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-salebanner": LocalJSX.MySalebanner & JSXBase.HTMLAttributes<HTMLMySalebannerElement>;
             "startseite-navigation": LocalJSX.StartseiteNavigation & JSXBase.HTMLAttributes<HTMLStartseiteNavigationElement>;
