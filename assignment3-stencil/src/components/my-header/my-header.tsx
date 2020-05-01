@@ -10,7 +10,7 @@ export class MyHeader implements ComponentInterface {
     return (
       <Host>
         <div class="wrapper">
-          <p class="headline">ARNÉE</p>
+          <p class="headline">A R N É E</p>
         </div>
       </Host>
     );
