@@ -10,7 +10,12 @@ export class MyHeader implements ComponentInterface {
     return (
       <Host>
         <div class="wrapper">
-          <p class="headline">A R N É E</p>
+          <div class="headline">
+            <p>A R N É E</p>
+          </div>
+          <div class="search">
+            <img src="../Bilder/search.png" alt="Search" />
+          </div>
         </div>
       </Host>
     );

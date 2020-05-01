@@ -6,15 +6,27 @@
 
 .headline {
   text-align: center;
-  font-size: 2.2em;
+  font-size: 2.1em;
   font-family: "Open Sans Condensed", sans-serif;
-  margin: 5%;
+  margin-top: 5%;
 }
 
 .wrapper {
-  background-color: grey;
-  height: 10vh;
+  background-color: white;
+  height: 12vh;
   justify-content: center;
   padding: 8px;
   border-bottom: 1px solid black;
+}
+.headline p {
+  margin: 0;
+}
+.search {
+  float: right;
+  margin-right: 6%;
+}
+
+.headline.search {
+  position: flex;
+  flex-direction: row;
 }
