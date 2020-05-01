@@ -6,84 +6,108 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-  interface HomeScreen {}
-  interface MyComponent {
-    /**
-     * The first name
-     */
-    first: string;
-    /**
-     * The last name
-     */
-    last: string;
-    /**
-     * The middle name
-     */
-    middle: string;
-  }
-  interface MyHeader {}
+    interface HomeScreen {
+    }
+    interface MyComponent {
+        /**
+          * The first name
+         */
+        "first": string;
+        /**
+          * The last name
+         */
+        "last": string;
+        /**
+          * The middle name
+         */
+        "middle": string;
+    }
+    interface MyHeader {
+    }
+    interface MySalebanner {
+    }
+    interface StartseiteNavigation {
+    }
 }
 declare global {
-  interface HTMLHomeScreenElement
-    extends Components.HomeScreen,
-      HTMLStencilElement {}
-  var HTMLHomeScreenElement: {
-    prototype: HTMLHomeScreenElement;
-    new (): HTMLHomeScreenElement;
-  };
-  interface HTMLMyComponentElement
-    extends Components.MyComponent,
-      HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-  interface HTMLMyHeaderElement
-    extends Components.MyHeader,
-      HTMLStencilElement {}
-  var HTMLMyHeaderElement: {
-    prototype: HTMLMyHeaderElement;
-    new (): HTMLMyHeaderElement;
-  };
-  interface HTMLElementTagNameMap {
-    "home-screen": HTMLHomeScreenElement;
-    "my-component": HTMLMyComponentElement;
-    "my-header": HTMLMyHeaderElement;
-  }
+    interface HTMLHomeScreenElement extends Components.HomeScreen, HTMLStencilElement {
+    }
+    var HTMLHomeScreenElement: {
+        prototype: HTMLHomeScreenElement;
+        new (): HTMLHomeScreenElement;
+    };
+    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    }
+    var HTMLMyComponentElement: {
+        prototype: HTMLMyComponentElement;
+        new (): HTMLMyComponentElement;
+    };
+    interface HTMLMyHeaderElement extends Components.MyHeader, HTMLStencilElement {
+    }
+    var HTMLMyHeaderElement: {
+        prototype: HTMLMyHeaderElement;
+        new (): HTMLMyHeaderElement;
+    };
+    interface HTMLMySalebannerElement extends Components.MySalebanner, HTMLStencilElement {
+    }
+    var HTMLMySalebannerElement: {
+        prototype: HTMLMySalebannerElement;
+        new (): HTMLMySalebannerElement;
+    };
+    interface HTMLStartseiteNavigationElement extends Components.StartseiteNavigation, HTMLStencilElement {
+    }
+    var HTMLStartseiteNavigationElement: {
+        prototype: HTMLStartseiteNavigationElement;
+        new (): HTMLStartseiteNavigationElement;
+    };
+    interface HTMLElementTagNameMap {
+        "home-screen": HTMLHomeScreenElement;
+        "my-component": HTMLMyComponentElement;
+        "my-header": HTMLMyHeaderElement;
+        "my-salebanner": HTMLMySalebannerElement;
+        "startseite-navigation": HTMLStartseiteNavigationElement;
+    }
 }
 declare namespace LocalJSX {
-  interface HomeScreen {}
-  interface MyComponent {
-    /**
-     * The first name
-     */
-    first?: string;
-    /**
-     * The last name
-     */
-    last?: string;
-    /**
-     * The middle name
-     */
-    middle?: string;
-  }
-  interface MyHeader {}
-  interface IntrinsicElements {
-    "home-screen": HomeScreen;
-    "my-component": MyComponent;
-    "my-header": MyHeader;
-  }
+    interface HomeScreen {
+    }
+    interface MyComponent {
+        /**
+          * The first name
+         */
+        "first"?: string;
+        /**
+          * The last name
+         */
+        "last"?: string;
+        /**
+          * The middle name
+         */
+        "middle"?: string;
+    }
+    interface MyHeader {
+    }
+    interface MySalebanner {
+    }
+    interface StartseiteNavigation {
+    }
+    interface IntrinsicElements {
+        "home-screen": HomeScreen;
+        "my-component": MyComponent;
+        "my-header": MyHeader;
+        "my-salebanner": MySalebanner;
+        "startseite-navigation": StartseiteNavigation;
+    }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
-  export namespace JSX {
-    interface IntrinsicElements {
-      "home-screen": LocalJSX.HomeScreen &
-        JSXBase.HTMLAttributes<HTMLHomeScreenElement>;
-      "my-component": LocalJSX.MyComponent &
-        JSXBase.HTMLAttributes<HTMLMyComponentElement>;
-      "my-header": LocalJSX.MyHeader &
-        JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
+    export namespace JSX {
+        interface IntrinsicElements {
+            "home-screen": LocalJSX.HomeScreen & JSXBase.HTMLAttributes<HTMLHomeScreenElement>;
+            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
+            "my-salebanner": LocalJSX.MySalebanner & JSXBase.HTMLAttributes<HTMLMySalebannerElement>;
+            "startseite-navigation": LocalJSX.StartseiteNavigation & JSXBase.HTMLAttributes<HTMLStartseiteNavigationElement>;
+        }
     }
-  }
 }
