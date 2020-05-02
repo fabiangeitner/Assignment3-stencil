@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Host, h } from '@stencil/core';
+import { Component, ComponentInterface, Host, h, } from '@stencil/core';
 
 @Component({
   tag: 'startseite-navigation',
@@ -7,8 +7,35 @@ import { Component, ComponentInterface, Host, h } from '@stencil/core';
 })
 export class StartseiteNavigation implements ComponentInterface {
 
-  handleClick() {
-    console.log("HELLO")
+
+  private handleHome(e: any) {
+    return (
+      e.currentTarget.classList.toggle("changeHome")
+    );
+  }
+
+  private handleCloth(e: any) {
+    return (
+      e.currentTarget.classList.toggle("changeCloth")
+    );
+  }
+
+  private handleHeart(e: any) {
+    return (
+      e.currentTarget.classList.toggle("changeHeart")
+    );
+  }
+
+  private handleBag(e: any) {
+    return (
+      e.currentTarget.classList.toggle("changeBag")
+    );
+  }
+
+  private handleUser(e: any) {
+    return (
+      e.currentTarget.classList.toggle("changeUser")
+    );
   }
 
   render() {
@@ -16,11 +43,11 @@ export class StartseiteNavigation implements ComponentInterface {
       <Host>
         <div class="nav">
           <ul>
-            <li onClick={() => { this.handleClick() }}><a href="#"><img src="../Bilder/home-run.png" alt="Home" /></a></li>
-            <li><a href="#"><img src="../Bilder/cloth.png" alt="T-shirt" /></a></li>
-            <li><a href="#"><img src="../Bilder/heart.png" alt="Favoriten" /></a></li>
-            <li><a href="#"><img src="../Bilder/bag.png" alt="Einkaufstasche" /></a></li>
-            <li><a href="#"><img src="../Bilder/user.png" alt="Konto" /></a></li>
+            <li onClick={(e) => this.handleHome(e)}><a href="#"><img src="../Bilder/home-run.png" alt="Home" /></a></li>
+            <li onClick={(e) => this.handleCloth(e)}><a href="#"><img src="../Bilder/cloth.png" alt="T-shirt" /></a></li>
+            <li onClick={(e) => this.handleHeart(e)}><a href="#"><img src="../Bilder/heart.png" alt="Favoriten" /></a></li>
+            <li onClick={(e) => this.handleBag(e)}><a href="#"><img src="../Bilder/bag.png" alt="Einkaufstasche" /></a></li>
+            <li onClick={(e) => this.handleUser(e)}><a href="#"><img src="../Bilder/user.png" alt="Konto" /></a></li>
           </ul>
         </div>
 
