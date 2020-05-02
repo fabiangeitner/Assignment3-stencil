@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Host, h, Prop } from '@stencil/core';
+import { Component, ComponentInterface, Host, h, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'product-variation',
@@ -8,6 +8,16 @@ import { Component, ComponentInterface, Host, h, Prop } from '@stencil/core';
 export class ProductVariation implements ComponentInterface {
 
   @Prop() color: string;
+  @State() value: string;
+
+  handleEinkauf() {
+    console.log(this.color);
+  }
+
+  inputChanged(e) {
+    const target = e.target as HTMLInputElement;
+    console.log(target.value);
+  }
 
   render() {
     return (
@@ -15,7 +25,7 @@ export class ProductVariation implements ComponentInterface {
         <div id="container">
           <div class="color"><p>{this.color}</p></div>
           <div class="size">
-            <select>
+            <select onChange={(e) => this.inputChanged(e)}>
               <option>S</option>
               <option>M</option>
               <option>L</option>
@@ -24,7 +34,7 @@ export class ProductVariation implements ComponentInterface {
             </select>
           </div>
         </div>
-        <div id="addButton">
+        <div id="addButton" onClick={() => this.handleEinkauf()}>
           <button>IN MEINE TASCHE</button>
         </div>
       </Host>
