@@ -11,7 +11,7 @@ export class MyPrice implements ComponentInterface {
   render() {
     return (
       <Host>
-        <p> Preis: {this.price}</p>
+        <p> {this.price}</p>
       </Host>
     );
   }
