@@ -24,6 +24,9 @@ export namespace Components {
     }
     interface MyHeader {
     }
+    interface MyPrice {
+        "price": string;
+    }
     interface MySalebanner {
     }
     interface StartseiteNavigation {
@@ -48,6 +51,12 @@ declare global {
         prototype: HTMLMyHeaderElement;
         new (): HTMLMyHeaderElement;
     };
+    interface HTMLMyPriceElement extends Components.MyPrice, HTMLStencilElement {
+    }
+    var HTMLMyPriceElement: {
+        prototype: HTMLMyPriceElement;
+        new (): HTMLMyPriceElement;
+    };
     interface HTMLMySalebannerElement extends Components.MySalebanner, HTMLStencilElement {
     }
     var HTMLMySalebannerElement: {
@@ -64,6 +73,7 @@ declare global {
         "home-screen": HTMLHomeScreenElement;
         "my-component": HTMLMyComponentElement;
         "my-header": HTMLMyHeaderElement;
+        "my-price": HTMLMyPriceElement;
         "my-salebanner": HTMLMySalebannerElement;
         "startseite-navigation": HTMLStartseiteNavigationElement;
     }
@@ -87,6 +97,9 @@ declare namespace LocalJSX {
     }
     interface MyHeader {
     }
+    interface MyPrice {
+        "price"?: string;
+    }
     interface MySalebanner {
     }
     interface StartseiteNavigation {
@@ -95,6 +108,7 @@ declare namespace LocalJSX {
         "home-screen": HomeScreen;
         "my-component": MyComponent;
         "my-header": MyHeader;
+        "my-price": MyPrice;
         "my-salebanner": MySalebanner;
         "startseite-navigation": StartseiteNavigation;
     }
@@ -106,6 +120,7 @@ declare module "@stencil/core" {
             "home-screen": LocalJSX.HomeScreen & JSXBase.HTMLAttributes<HTMLHomeScreenElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
+            "my-price": LocalJSX.MyPrice & JSXBase.HTMLAttributes<HTMLMyPriceElement>;
             "my-salebanner": LocalJSX.MySalebanner & JSXBase.HTMLAttributes<HTMLMySalebannerElement>;
             "startseite-navigation": LocalJSX.StartseiteNavigation & JSXBase.HTMLAttributes<HTMLStartseiteNavigationElement>;
         }
