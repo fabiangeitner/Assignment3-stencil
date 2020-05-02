@@ -24,9 +24,20 @@
 .search {
   float: right;
   margin-right: 6%;
+  margin-left: 6%;
 }
 
 .headline.search {
   position: flex;
   flex-direction: row;
+}
+#searchInput {
+  width: 150px;
+  height: 20px;
+  margin: 10px 10px;
+  display: none;
+}
+
+#searchInput:focus {
+  background-color: red;
 }
