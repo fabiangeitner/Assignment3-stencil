@@ -28,7 +28,31 @@ text-decoration: none;
 }
 
 .nav ul li a img{
-  width: 120%;
+  /* width: 120%; */
 }
 
+.changeHome{ 
+  background-image: url(../Bilder/home-schwarz.png);
+  background-repeat: no-repeat;
+}
+
+.changeCloth{ 
+  background-image: url(../Bilder/cloth-schwarz.png);
+  background-repeat: no-repeat;
+}
+
+.changeHeart{ 
+  background-image: url(../Bilder/heart-schwarz.png);
+  background-repeat: no-repeat;
+}
+
+.changeBag{ 
+  background-image: url(../Bilder/bag-schwarz.png);
+  background-repeat: no-repeat;
+}
+
+.changeUser{ 
+  background-image: url(../Bilder/user-schwarz.png);
+  background-repeat: no-repeat;
+}
 

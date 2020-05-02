@@ -22,12 +22,17 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MyDescription {
+    }
     interface MyHeader {
     }
     interface MyPrice {
         "price": string;
     }
     interface MySalebanner {
+    }
+    interface ProductVariation {
+        "color": string;
     }
     interface StartseiteNavigation {
     }
@@ -44,6 +49,12 @@ declare global {
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
+    };
+    interface HTMLMyDescriptionElement extends Components.MyDescription, HTMLStencilElement {
+    }
+    var HTMLMyDescriptionElement: {
+        prototype: HTMLMyDescriptionElement;
+        new (): HTMLMyDescriptionElement;
     };
     interface HTMLMyHeaderElement extends Components.MyHeader, HTMLStencilElement {
     }
@@ -63,6 +74,12 @@ declare global {
         prototype: HTMLMySalebannerElement;
         new (): HTMLMySalebannerElement;
     };
+    interface HTMLProductVariationElement extends Components.ProductVariation, HTMLStencilElement {
+    }
+    var HTMLProductVariationElement: {
+        prototype: HTMLProductVariationElement;
+        new (): HTMLProductVariationElement;
+    };
     interface HTMLStartseiteNavigationElement extends Components.StartseiteNavigation, HTMLStencilElement {
     }
     var HTMLStartseiteNavigationElement: {
@@ -72,9 +89,11 @@ declare global {
     interface HTMLElementTagNameMap {
         "home-screen": HTMLHomeScreenElement;
         "my-component": HTMLMyComponentElement;
+        "my-description": HTMLMyDescriptionElement;
         "my-header": HTMLMyHeaderElement;
         "my-price": HTMLMyPriceElement;
         "my-salebanner": HTMLMySalebannerElement;
+        "product-variation": HTMLProductVariationElement;
         "startseite-navigation": HTMLStartseiteNavigationElement;
     }
 }
@@ -95,6 +114,8 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface MyDescription {
+    }
     interface MyHeader {
     }
     interface MyPrice {
@@ -102,14 +123,19 @@ declare namespace LocalJSX {
     }
     interface MySalebanner {
     }
+    interface ProductVariation {
+        "color"?: string;
+    }
     interface StartseiteNavigation {
     }
     interface IntrinsicElements {
         "home-screen": HomeScreen;
         "my-component": MyComponent;
+        "my-description": MyDescription;
         "my-header": MyHeader;
         "my-price": MyPrice;
         "my-salebanner": MySalebanner;
+        "product-variation": ProductVariation;
         "startseite-navigation": StartseiteNavigation;
     }
 }
@@ -119,9 +145,11 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "home-screen": LocalJSX.HomeScreen & JSXBase.HTMLAttributes<HTMLHomeScreenElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-description": LocalJSX.MyDescription & JSXBase.HTMLAttributes<HTMLMyDescriptionElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
             "my-price": LocalJSX.MyPrice & JSXBase.HTMLAttributes<HTMLMyPriceElement>;
             "my-salebanner": LocalJSX.MySalebanner & JSXBase.HTMLAttributes<HTMLMySalebannerElement>;
+            "product-variation": LocalJSX.ProductVariation & JSXBase.HTMLAttributes<HTMLProductVariationElement>;
             "startseite-navigation": LocalJSX.StartseiteNavigation & JSXBase.HTMLAttributes<HTMLStartseiteNavigationElement>;
         }
     }
