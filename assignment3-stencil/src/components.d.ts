@@ -22,6 +22,8 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MyFilter {
+    }
     interface MyHeader {
     }
     interface MyPrice {
@@ -44,6 +46,12 @@ declare global {
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
+    };
+    interface HTMLMyFilterElement extends Components.MyFilter, HTMLStencilElement {
+    }
+    var HTMLMyFilterElement: {
+        prototype: HTMLMyFilterElement;
+        new (): HTMLMyFilterElement;
     };
     interface HTMLMyHeaderElement extends Components.MyHeader, HTMLStencilElement {
     }
@@ -72,6 +80,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "home-screen": HTMLHomeScreenElement;
         "my-component": HTMLMyComponentElement;
+        "my-filter": HTMLMyFilterElement;
         "my-header": HTMLMyHeaderElement;
         "my-price": HTMLMyPriceElement;
         "my-salebanner": HTMLMySalebannerElement;
@@ -95,6 +104,8 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface MyFilter {
+    }
     interface MyHeader {
     }
     interface MyPrice {
@@ -107,6 +118,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "home-screen": HomeScreen;
         "my-component": MyComponent;
+        "my-filter": MyFilter;
         "my-header": MyHeader;
         "my-price": MyPrice;
         "my-salebanner": MySalebanner;
@@ -119,6 +131,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "home-screen": LocalJSX.HomeScreen & JSXBase.HTMLAttributes<HTMLHomeScreenElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-filter": LocalJSX.MyFilter & JSXBase.HTMLAttributes<HTMLMyFilterElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
             "my-price": LocalJSX.MyPrice & JSXBase.HTMLAttributes<HTMLMyPriceElement>;
             "my-salebanner": LocalJSX.MySalebanner & JSXBase.HTMLAttributes<HTMLMySalebannerElement>;
