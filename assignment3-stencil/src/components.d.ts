@@ -31,6 +31,9 @@ export namespace Components {
     interface MyPrice {
         "price": string;
     }
+    interface MyProductlist {
+        "name": string;
+    }
     interface MySalebanner {
     }
     interface ProductVariation {
@@ -76,6 +79,12 @@ declare global {
         prototype: HTMLMyPriceElement;
         new (): HTMLMyPriceElement;
     };
+    interface HTMLMyProductlistElement extends Components.MyProductlist, HTMLStencilElement {
+    }
+    var HTMLMyProductlistElement: {
+        prototype: HTMLMyProductlistElement;
+        new (): HTMLMyProductlistElement;
+    };
     interface HTMLMySalebannerElement extends Components.MySalebanner, HTMLStencilElement {
     }
     var HTMLMySalebannerElement: {
@@ -101,6 +110,7 @@ declare global {
         "my-filter": HTMLMyFilterElement;
         "my-header": HTMLMyHeaderElement;
         "my-price": HTMLMyPriceElement;
+        "my-productlist": HTMLMyProductlistElement;
         "my-salebanner": HTMLMySalebannerElement;
         "product-variation": HTMLProductVariationElement;
         "startseite-navigation": HTMLStartseiteNavigationElement;
@@ -132,6 +142,9 @@ declare namespace LocalJSX {
     interface MyPrice {
         "price"?: string;
     }
+    interface MyProductlist {
+        "name"?: string;
+    }
     interface MySalebanner {
     }
     interface ProductVariation {
@@ -146,6 +159,7 @@ declare namespace LocalJSX {
         "my-filter": MyFilter;
         "my-header": MyHeader;
         "my-price": MyPrice;
+        "my-productlist": MyProductlist;
         "my-salebanner": MySalebanner;
         "product-variation": ProductVariation;
         "startseite-navigation": StartseiteNavigation;
@@ -161,6 +175,7 @@ declare module "@stencil/core" {
             "my-filter": LocalJSX.MyFilter & JSXBase.HTMLAttributes<HTMLMyFilterElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
             "my-price": LocalJSX.MyPrice & JSXBase.HTMLAttributes<HTMLMyPriceElement>;
+            "my-productlist": LocalJSX.MyProductlist & JSXBase.HTMLAttributes<HTMLMyProductlistElement>;
             "my-salebanner": LocalJSX.MySalebanner & JSXBase.HTMLAttributes<HTMLMySalebannerElement>;
             "product-variation": LocalJSX.ProductVariation & JSXBase.HTMLAttributes<HTMLProductVariationElement>;
             "startseite-navigation": LocalJSX.StartseiteNavigation & JSXBase.HTMLAttributes<HTMLStartseiteNavigationElement>;
