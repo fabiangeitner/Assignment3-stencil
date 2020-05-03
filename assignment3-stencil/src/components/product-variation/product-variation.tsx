@@ -5,6 +5,7 @@ import { Component, ComponentInterface, Host, h, Prop, State } from '@stencil/co
   styleUrl: 'product-variation.css',
   shadow: true,
 })
+
 export class ProductVariation implements ComponentInterface {
 
   @Prop() color: string;
@@ -19,6 +20,7 @@ export class ProductVariation implements ComponentInterface {
     console.log(target.value);
   }
 
+
   render() {
     return (
       <Host>
@@ -26,6 +28,7 @@ export class ProductVariation implements ComponentInterface {
           <div class="color"><p>{this.color}</p></div>
           <div class="size">
             <select onChange={(e) => this.inputChanged(e)}>
+              <option>Bitte Größe wählen</option>
               <option>S</option>
               <option>M</option>
               <option>L</option>
@@ -37,7 +40,7 @@ export class ProductVariation implements ComponentInterface {
         <div id="addButton" onClick={() => this.handleEinkauf()}>
           <button>IN MEINE TASCHE</button>
         </div>
-      </Host>
+      </Host >
     );
   }
 

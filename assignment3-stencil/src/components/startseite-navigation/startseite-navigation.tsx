@@ -5,6 +5,7 @@ import { Component, ComponentInterface, Host, h, } from '@stencil/core';
   styleUrl: 'startseite-navigation.css',
   shadow: true,
 })
+
 export class StartseiteNavigation implements ComponentInterface {
 
 
