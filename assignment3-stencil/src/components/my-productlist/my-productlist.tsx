@@ -14,7 +14,9 @@ export class MyProductlist implements ComponentInterface {
       <Host>
         <div class="background">
           <img src="../Bilder/heart.png" alt="heart" id="heart"></img>
-          <img src={source} alt="product-image" />
+          <a href="detailseite.html">
+            <img src={source} alt="product-image" />
+          </a>
           <p id="product-name">
             <slot></slot>
           </p>

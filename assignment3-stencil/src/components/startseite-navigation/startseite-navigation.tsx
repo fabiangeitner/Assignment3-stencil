@@ -37,7 +37,7 @@ export class StartseiteNavigation implements ComponentInterface {
               </a>
             </li>
             <li onClick={(e) => this.handleCloth(e)}>
-              <a href="detailseite.html">
+              <a href="productlist.html">
                 <img src="../Bilder/cloth.png" alt="T-shirt" />
               </a>
             </li>
