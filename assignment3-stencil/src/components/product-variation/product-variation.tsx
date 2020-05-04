@@ -11,8 +11,10 @@ export class ProductVariation implements ComponentInterface {
   @Prop() color: string;
   @State() value: string;
 
+
   handleEinkauf() {
     console.log(this.color);
+
   }
 
   inputChanged(e) {
