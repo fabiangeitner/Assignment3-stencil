@@ -1,0 +1,14 @@
+:host {
+  display: block;
+}
+
+#filter-img{
+  padding-left:85%;
+  margin:5px;
+  width: 30px;
+  display: block;
+}
+
+#filter{
+  display: none;
+}

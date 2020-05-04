@@ -26,6 +26,8 @@ export namespace Components {
     }
     interface MyFilter {
     }
+    interface MyFilterIcon {
+    }
     interface MyHeader {
     }
     interface MyPrice {
@@ -66,6 +68,12 @@ declare global {
     var HTMLMyFilterElement: {
         prototype: HTMLMyFilterElement;
         new (): HTMLMyFilterElement;
+    };
+    interface HTMLMyFilterIconElement extends Components.MyFilterIcon, HTMLStencilElement {
+    }
+    var HTMLMyFilterIconElement: {
+        prototype: HTMLMyFilterIconElement;
+        new (): HTMLMyFilterIconElement;
     };
     interface HTMLMyHeaderElement extends Components.MyHeader, HTMLStencilElement {
     }
@@ -108,6 +116,7 @@ declare global {
         "my-component": HTMLMyComponentElement;
         "my-description": HTMLMyDescriptionElement;
         "my-filter": HTMLMyFilterElement;
+        "my-filter-icon": HTMLMyFilterIconElement;
         "my-header": HTMLMyHeaderElement;
         "my-price": HTMLMyPriceElement;
         "my-productlist": HTMLMyProductlistElement;
@@ -137,6 +146,8 @@ declare namespace LocalJSX {
     }
     interface MyFilter {
     }
+    interface MyFilterIcon {
+    }
     interface MyHeader {
     }
     interface MyPrice {
@@ -157,6 +168,7 @@ declare namespace LocalJSX {
         "my-component": MyComponent;
         "my-description": MyDescription;
         "my-filter": MyFilter;
+        "my-filter-icon": MyFilterIcon;
         "my-header": MyHeader;
         "my-price": MyPrice;
         "my-productlist": MyProductlist;
@@ -173,6 +185,7 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-description": LocalJSX.MyDescription & JSXBase.HTMLAttributes<HTMLMyDescriptionElement>;
             "my-filter": LocalJSX.MyFilter & JSXBase.HTMLAttributes<HTMLMyFilterElement>;
+            "my-filter-icon": LocalJSX.MyFilterIcon & JSXBase.HTMLAttributes<HTMLMyFilterIconElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
             "my-price": LocalJSX.MyPrice & JSXBase.HTMLAttributes<HTMLMyPriceElement>;
             "my-productlist": LocalJSX.MyProductlist & JSXBase.HTMLAttributes<HTMLMyProductlistElement>;
