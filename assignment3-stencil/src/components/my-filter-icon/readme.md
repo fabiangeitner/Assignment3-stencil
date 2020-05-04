@@ -1,4 +1,4 @@
-# my-filter
+# my-filter-icon
 
 
 
@@ -7,15 +7,15 @@
 
 ## Dependencies
 
-### Used by
+### Depends on
 
- - [my-filter-icon](../my-filter-icon)
+- [my-filter](../my-filter)
 
 ### Graph
 ```mermaid
 graph TD;
   my-filter-icon --> my-filter
-  style my-filter fill:#f9f,stroke:#333,stroke-width:4px
+  style my-filter-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

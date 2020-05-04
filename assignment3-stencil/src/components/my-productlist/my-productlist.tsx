@@ -8,12 +8,18 @@ import { Component, ComponentInterface, Host, h, Prop } from "@stencil/core";
 export class MyProductlist implements ComponentInterface {
   @Prop() name: string;
 
+  private handleHeart(e: any) {
+    return e.currentTarget.classList.toggle("changeHeart");
+  }
+
   render() {
     let source = this.name;
     return (
       <Host>
         <div class="background">
-          <img src="../Bilder/heart.png" alt="heart" id="heart"></img>
+          <div id="heart">
+            <img onClick={(e) => this.handleHeart(e)} src="../Bilder/heart.png" alt="heart"></img>
+          </div>
           <a href="detailseite.html">
             <img src={source} alt="product-image" />
           </a>

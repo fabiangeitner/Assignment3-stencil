@@ -22,10 +22,18 @@
   margin-top: 5px;
   margin-bottom: 5px;
 }
-#heart {
+#heart img {
   z-index: 5;
-  width: 17px;
-  padding-left: 35%;
-  padding-top: 4%; 
   position: absolute;
+  padding-top: 4%;
+  padding-left: 33%;
+}
+
+
+.changeHeart{ 
+  z-index: 5;
+  background-image: url(../Bilder/heart-schwarz.png);
+  background-repeat: no-repeat;
+  background-position: 124px 15px;
+  background-size: 24px;
 }
