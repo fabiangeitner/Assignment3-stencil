@@ -26,6 +26,8 @@ export namespace Components {
     }
     interface MyFilter {
     }
+    interface MyFilterIcon {
+    }
     interface MyHeader {
     }
     interface MyPrice {
@@ -35,6 +37,8 @@ export namespace Components {
         "name": string;
     }
     interface MySalebanner {
+    }
+    interface MySlideshow {
     }
     interface ProductVariation {
         "color": string;
@@ -67,6 +71,12 @@ declare global {
         prototype: HTMLMyFilterElement;
         new (): HTMLMyFilterElement;
     };
+    interface HTMLMyFilterIconElement extends Components.MyFilterIcon, HTMLStencilElement {
+    }
+    var HTMLMyFilterIconElement: {
+        prototype: HTMLMyFilterIconElement;
+        new (): HTMLMyFilterIconElement;
+    };
     interface HTMLMyHeaderElement extends Components.MyHeader, HTMLStencilElement {
     }
     var HTMLMyHeaderElement: {
@@ -91,6 +101,12 @@ declare global {
         prototype: HTMLMySalebannerElement;
         new (): HTMLMySalebannerElement;
     };
+    interface HTMLMySlideshowElement extends Components.MySlideshow, HTMLStencilElement {
+    }
+    var HTMLMySlideshowElement: {
+        prototype: HTMLMySlideshowElement;
+        new (): HTMLMySlideshowElement;
+    };
     interface HTMLProductVariationElement extends Components.ProductVariation, HTMLStencilElement {
     }
     var HTMLProductVariationElement: {
@@ -108,10 +124,12 @@ declare global {
         "my-component": HTMLMyComponentElement;
         "my-description": HTMLMyDescriptionElement;
         "my-filter": HTMLMyFilterElement;
+        "my-filter-icon": HTMLMyFilterIconElement;
         "my-header": HTMLMyHeaderElement;
         "my-price": HTMLMyPriceElement;
         "my-productlist": HTMLMyProductlistElement;
         "my-salebanner": HTMLMySalebannerElement;
+        "my-slideshow": HTMLMySlideshowElement;
         "product-variation": HTMLProductVariationElement;
         "startseite-navigation": HTMLStartseiteNavigationElement;
     }
@@ -137,6 +155,8 @@ declare namespace LocalJSX {
     }
     interface MyFilter {
     }
+    interface MyFilterIcon {
+    }
     interface MyHeader {
     }
     interface MyPrice {
@@ -146,6 +166,8 @@ declare namespace LocalJSX {
         "name"?: string;
     }
     interface MySalebanner {
+    }
+    interface MySlideshow {
     }
     interface ProductVariation {
         "color"?: string;
@@ -157,10 +179,12 @@ declare namespace LocalJSX {
         "my-component": MyComponent;
         "my-description": MyDescription;
         "my-filter": MyFilter;
+        "my-filter-icon": MyFilterIcon;
         "my-header": MyHeader;
         "my-price": MyPrice;
         "my-productlist": MyProductlist;
         "my-salebanner": MySalebanner;
+        "my-slideshow": MySlideshow;
         "product-variation": ProductVariation;
         "startseite-navigation": StartseiteNavigation;
     }
@@ -173,10 +197,12 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-description": LocalJSX.MyDescription & JSXBase.HTMLAttributes<HTMLMyDescriptionElement>;
             "my-filter": LocalJSX.MyFilter & JSXBase.HTMLAttributes<HTMLMyFilterElement>;
+            "my-filter-icon": LocalJSX.MyFilterIcon & JSXBase.HTMLAttributes<HTMLMyFilterIconElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
             "my-price": LocalJSX.MyPrice & JSXBase.HTMLAttributes<HTMLMyPriceElement>;
             "my-productlist": LocalJSX.MyProductlist & JSXBase.HTMLAttributes<HTMLMyProductlistElement>;
             "my-salebanner": LocalJSX.MySalebanner & JSXBase.HTMLAttributes<HTMLMySalebannerElement>;
+            "my-slideshow": LocalJSX.MySlideshow & JSXBase.HTMLAttributes<HTMLMySlideshowElement>;
             "product-variation": LocalJSX.ProductVariation & JSXBase.HTMLAttributes<HTMLProductVariationElement>;
             "startseite-navigation": LocalJSX.StartseiteNavigation & JSXBase.HTMLAttributes<HTMLStartseiteNavigationElement>;
         }
