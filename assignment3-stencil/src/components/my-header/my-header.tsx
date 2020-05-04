@@ -12,7 +12,7 @@ export class MyHeader implements ComponentInterface {
     this.inputSearch.addEventListener("keyup", function (event) {
       if (event.keyCode === 13) {
         event.preventDefault();
-        // console.log(this.inputSearch.value);
+        //console.log(this.inputSearch.value);
 
         console.log("suchen");
       }
@@ -41,6 +41,7 @@ export class MyHeader implements ComponentInterface {
               id="searchInput"
               ref={(el) => (this.inputSearch = el as HTMLInputElement)}
               type="text"
+              placeholder="Suchen..."
             />
           </div>
         </div>
