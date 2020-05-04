@@ -11,15 +11,15 @@ export class MySlideshow implements ComponentInterface {
   @State() secondSlide!: HTMLElement;
   @State() thirdSlide!: HTMLElement;
 
-  hideSlides(){
+  hideSlides() {
     this.firstSlide.style.display = 'none';
     this.secondSlide.style.display = 'none';
     this.thirdSlide.style.display = 'none';
   }
 
-  dotsChangeSlides(id:string){
+  dotsChangeSlides(id: string) {
     this.hideSlides();
-    switch(id){
+    switch (id) {
       case '1':
         this.firstSlide.style.display = 'block';
         break;
@@ -38,20 +38,23 @@ export class MySlideshow implements ComponentInterface {
   render() {
     return (
       <Host>
-        <img src='../Bilder/Bild_1.1.png' alt='green-tshirt1' 
-        ref={(el)=>this.firstSlide = el as HTMLElement} id='first'>
-        </img>
-        <img src='../Bilder/Bild_1.2.png' alt='green-tshirt1' 
-        ref={(el)=>this.secondSlide = el as HTMLElement}>
-        </img>
-        <img src='../Bilder/Bild_1.3.png' alt='green-tshirt1' 
-        ref={(el)=>this.thirdSlide = el as HTMLElement}>
-        </img>
-        <div>
-							<span class="dot" onClick={()=>this.dotsChangeSlides('1')}></span> 
-							<span class="dot" onClick={()=>this.dotsChangeSlides('2')}></span> 
-							<span class="dot" onClick={()=>this.dotsChangeSlides('3')}></span> 
-			  </div>
+        <div id="slideshow">
+          <img src='../Bilder/Bild_1.1.png' alt='green-tshirt1'
+            ref={(el) => this.firstSlide = el as HTMLElement} id='first'>
+          </img>
+          <img src='../Bilder/Bild_1.2.png' alt='green-tshirt1'
+            ref={(el) => this.secondSlide = el as HTMLElement}>
+          </img>
+          <img src='../Bilder/Bild_1.3.png' alt='green-tshirt1'
+            ref={(el) => this.thirdSlide = el as HTMLElement}>
+          </img>
+          <div>
+            <span class="dot" onClick={() => this.dotsChangeSlides('1')}></span>
+            <span class="dot" onClick={() => this.dotsChangeSlides('2')}></span>
+            <span class="dot" onClick={() => this.dotsChangeSlides('3')}></span>
+          </div>
+        </div>
+
       </Host>
     );
   }

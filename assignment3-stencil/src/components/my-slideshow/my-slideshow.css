@@ -2,8 +2,9 @@
   display: block;
 }
 
-div {
+#slideshow {
   text-align: center;
+  padding-top: 13vh;
 }
 
 #first{

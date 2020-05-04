@@ -17,6 +17,9 @@
   justify-content: center;
   padding: 8px;
   border-bottom: 1px solid black;
+  position: fixed;
+  width: 100%;
+  z-index: 17;
 }
 .headline p {
   margin: 0;

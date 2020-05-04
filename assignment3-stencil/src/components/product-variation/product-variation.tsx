@@ -42,6 +42,7 @@ export class ProductVariation implements ComponentInterface {
         <div id="addButton" onClick={() => this.handleEinkauf()}>
           <button>IN MEINE TASCHE</button>
         </div>
+
       </Host >
     );
   }

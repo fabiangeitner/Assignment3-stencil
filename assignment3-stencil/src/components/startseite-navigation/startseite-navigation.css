@@ -5,6 +5,11 @@
 .nav{
   border-top: solid 1px black;
   height: 8vh;
+  width: 100%;
+  position: fixed;
+  top: 92%;
+  background-color: white;
+  z-index: 16;
 }
 
 .nav ul{
