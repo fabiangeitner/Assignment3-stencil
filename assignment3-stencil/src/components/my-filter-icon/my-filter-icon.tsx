@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Host, h } from '@stencil/core';
+import { Component, ComponentInterface, Host, h, State } from '@stencil/core';
 
 @Component({
   tag: 'my-filter-icon',
@@ -8,7 +8,7 @@ import { Component, ComponentInterface, Host, h } from '@stencil/core';
 export class MyFilterIcon implements ComponentInterface {
 
   
-  myFilter!: HTMLElement;
+  @State() myFilter!: HTMLElement;
 
   getMyFilter(ev:UIEvent){
     let img = ev.target as HTMLElement;
