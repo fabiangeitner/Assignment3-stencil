@@ -8,20 +8,6 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface HomeScreen {
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
     interface MyDescription {
     }
     interface MyFilter {
@@ -52,12 +38,6 @@ declare global {
     var HTMLHomeScreenElement: {
         prototype: HTMLHomeScreenElement;
         new (): HTMLHomeScreenElement;
-    };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
     };
     interface HTMLMyDescriptionElement extends Components.MyDescription, HTMLStencilElement {
     }
@@ -121,7 +101,6 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "home-screen": HTMLHomeScreenElement;
-        "my-component": HTMLMyComponentElement;
         "my-description": HTMLMyDescriptionElement;
         "my-filter": HTMLMyFilterElement;
         "my-filter-icon": HTMLMyFilterIconElement;
@@ -136,20 +115,6 @@ declare global {
 }
 declare namespace LocalJSX {
     interface HomeScreen {
-    }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
     }
     interface MyDescription {
     }
@@ -176,7 +141,6 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "home-screen": HomeScreen;
-        "my-component": MyComponent;
         "my-description": MyDescription;
         "my-filter": MyFilter;
         "my-filter-icon": MyFilterIcon;
@@ -194,7 +158,6 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "home-screen": LocalJSX.HomeScreen & JSXBase.HTMLAttributes<HTMLHomeScreenElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-description": LocalJSX.MyDescription & JSXBase.HTMLAttributes<HTMLMyDescriptionElement>;
             "my-filter": LocalJSX.MyFilter & JSXBase.HTMLAttributes<HTMLMyFilterElement>;
             "my-filter-icon": LocalJSX.MyFilterIcon & JSXBase.HTMLAttributes<HTMLMyFilterIconElement>;
