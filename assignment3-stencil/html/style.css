@@ -2,3 +2,8 @@ body {
   max-width: 375px;
   margin: 0 auto;
 }
+
+.products{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
