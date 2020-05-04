@@ -49,6 +49,7 @@ h1 {
 .popUp {
   background-color: white;
   height: 75vh;
+  padding-top: 12vh;
 }
 .category {
   height: 7vh;
