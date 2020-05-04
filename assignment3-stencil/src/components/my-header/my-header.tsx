@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Host, h } from "@stencil/core";
+import { Component, ComponentInterface, Host, h, State } from "@stencil/core";
 
 @Component({
   tag: "my-header",
@@ -6,21 +6,25 @@ import { Component, ComponentInterface, Host, h } from "@stencil/core";
   shadow: true,
 })
 export class MyHeader implements ComponentInterface {
-  //@State() showing: boolean;
-  //@Listen("click", { capture: true })
+  @State() inputSearch!: HTMLInputElement;
 
-  inputSearch!: HTMLElement;
   showhideInput() {
+    this.inputSearch.addEventListener("keyup", function (event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        // console.log(this.inputSearch.value);
+
+        console.log("suchen");
+      }
+    });
     if (this.inputSearch.style.display == "none") {
       this.inputSearch.style.display = "block";
     } else {
       this.inputSearch.style.display = "none";
     }
-    //this.showing = !this.showing;
   }
 
   render() {
-    //let inputfield = <input id="searchInput" type="text" />;
     return (
       <Host>
         <div class="wrapper">
@@ -28,18 +32,15 @@ export class MyHeader implements ComponentInterface {
             <p>A R N É E</p>
           </div>
           <div class="search">
-            <input
-              id="searchInput"
-              ref={(el) => (this.inputSearch = el as HTMLElement)}
-              type="text"
-            />
-
             <img
               src="../Bilder/search.png"
               alt="Search"
-              onClick={() => {
-                this.showhideInput();
-              }}
+              onClick={() => this.showhideInput()}
+            />
+            <input
+              id="searchInput"
+              ref={(el) => (this.inputSearch = el as HTMLInputElement)}
+              type="text"
             />
           </div>
         </div>
