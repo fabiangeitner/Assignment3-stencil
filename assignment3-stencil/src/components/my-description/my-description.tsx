@@ -10,13 +10,13 @@ export class MyDescription implements ComponentInterface {
   @State() description!: HTMLElement;
 
   beschreibung(e: UIEvent) {
-    let img = e.target as HTMLElement;
+    let wrapper = e.target as HTMLElement;
     if (this.description.style.display == 'none') {
       this.description.style.display = 'block';
-      img.style.display = 'none';
+      wrapper.style.display = 'none';
     } else {
       this.description.style.display = 'none';
-      img.style.display = 'block';
+      wrapper.style.display = 'block';
     };
   }
 

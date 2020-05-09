@@ -18,8 +18,8 @@ export class ProductVariation implements ComponentInterface {
   }
 
   inputChanged(e) {
-    const target = e.target as HTMLInputElement;
-    console.log(target.value);
+    const size = e.size as HTMLInputElement;
+    console.log(size.value);
   }
 
 
