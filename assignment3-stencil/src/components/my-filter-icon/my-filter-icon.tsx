@@ -12,20 +12,15 @@ export class MyFilterIcon implements ComponentInterface {
 
   getMyFilter(ev:UIEvent){
     let img = ev.target as HTMLElement;
-    if(this.myFilter.style.display == 'none'){
-      this.myFilter.style.display = 'block';
-      img.style.display = 'none';
-    }else{
-      this.myFilter.style.display = 'none';
-      img.style.display = 'block';
-    };
+    this.myFilter.style.display = 'block';
+    img.style.display = 'none';
   }
 
   render() {
     return (
       <Host>
         <my-filter id="filter" ref={(el)=>this.myFilter = el as HTMLElement}></my-filter>
-        <div class='filterIcon' onClick={(event:UIEvent)=> this.getMyFilter(event)}>
+        <div onClick={(event:UIEvent)=> this.getMyFilter(event)}>
         <img 
         src='../Bilder/filter-list.png' 
         alt='filter-list' 

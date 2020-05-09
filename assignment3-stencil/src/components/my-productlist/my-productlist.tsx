@@ -13,7 +13,6 @@ export class MyProductlist implements ComponentInterface {
   }
 
   render() {
-    let source = this.name;
     return (
       <Host>
         <div class="background">
@@ -21,7 +20,7 @@ export class MyProductlist implements ComponentInterface {
             <img onClick={(e) => this.handleHeart(e)} src="../Bilder/heart.png" alt="heart"></img>
           </div>
           <a href="detailseite.html">
-            <img src={source} alt="product-image" />
+            <img src={this.name} alt="product-image" />
           </a>
           <p id="product-name">
             <slot></slot>
