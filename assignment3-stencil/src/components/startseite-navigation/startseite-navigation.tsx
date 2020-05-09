@@ -7,23 +7,23 @@ import { Component, ComponentInterface, Host, h } from "@stencil/core";
 })
 
 export class StartseiteNavigation implements ComponentInterface {
-  private handleHome(e: any) {
+  private handleHome(e) {
     return e.currentTarget.classList.toggle("changeHome");
   }
 
-  private handleCloth(e: any) {
+  private handleCloth(e) {
     return e.currentTarget.classList.toggle("changeCloth");
   }
 
-  private handleHeart(e: any) {
+  private handleHeart(e) {
     return e.currentTarget.classList.toggle("changeHeart");
   }
 
-  private handleBag(e: any) {
+  private handleBag(e) {
     return e.currentTarget.classList.toggle("changeBag");
   }
 
-  private handleUser(e: any) {
+  private handleUser(e) {
     return e.currentTarget.classList.toggle("changeUser");
   }
 
