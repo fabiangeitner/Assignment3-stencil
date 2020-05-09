@@ -8,7 +8,7 @@ import { Component, ComponentInterface, Host, h, State } from "@stencil/core";
 export class MyHeader implements ComponentInterface {
   @State() inputSearch: HTMLInputElement;
 
-  showhideInput() {
+  async showhideInput() {
     if (this.inputSearch.style.display == "none") {
       this.inputSearch.style.display = "block";
     } else {

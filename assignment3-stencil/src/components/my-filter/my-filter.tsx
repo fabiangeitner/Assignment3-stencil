@@ -6,13 +6,6 @@ import { Component, ComponentInterface, Host, h } from "@stencil/core";
   shadow: true,
 })
 export class MyFilter implements ComponentInterface {
-
-  myFilter!:HTMLElement;
-
-  closeMyFilter(){
-    this.myFilter.style.display = 'none';
-  }
-
   private selectCategory(e) {
     return e.currentTarget.classList.toggle("change");
   }
@@ -22,9 +15,7 @@ export class MyFilter implements ComponentInterface {
       <Host>
         <div class="popUp">
           <div class="header">
-            <a href='' class="cancel" 
-            ref={(el)=>this.myFilter = el as HTMLElement}
-            onClick={()=>this.closeMyFilter}>
+            <a href="productlist.html" class="cancel">
               <span></span>
               <span></span>
             </a>
